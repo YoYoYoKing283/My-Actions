@@ -1,0 +1,12 @@
+name: 'build-test'
+on:
+  push:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ServerChan · Server酱通知
+        uses: easychen/github-action-server-chan@v1.0.0
+        with:
+          sendkey: ${{ secrets.sendkey }}
+          title: "贴吧签到通知，应该成功了吧？😝"
